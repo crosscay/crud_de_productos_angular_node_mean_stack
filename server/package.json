@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crosscay/servidor_de_productos_con_angular_y_node_js.git"
+    "url": "git+https://github.com/crosscay/mean_stack_crud_de_productos_con_angular_y_node_js.git"
   },
   "author": "Carlos Caicedo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/crosscay/servidor_de_productos_con_angular_y_node_js/issues"
+    "url": "https://github.com/crosscay/mean_stack_crud_de_productos_con_angular_y_node_js/issues"
   },
-  "homepage": "https://github.com/crosscay/servidor_de_productos_con_angular_y_node_js#readme",
+  "homepage": "https://github.com/crosscay/mean_stack_crud_de_productos_con_angular_y_node_js#readme",
   "devDependencies": {
     "nodemon": "^2.0.7"
   },
