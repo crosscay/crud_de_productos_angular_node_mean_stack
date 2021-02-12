@@ -1,28 +1,30 @@
 
-# MEAN CRUD with Angular 6
+# Mean Stack Crud de productos con angular 11 y node js
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
+Aplicación web creada en react js para la gestión de proyectos y tareas, usando hooks, mongodb, node, y express.
 
-## Development server
+### Cómo empezar
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para iniciar el frontend utilice:
 
-## Code scaffolding
+```bash
+$ git clon https://github.com/crosscay/mean_stack_crud_de_productos_con_angular_y_node_js.git
+$ cd mean_stack_crud_de_productos_con_angular_y_node_js-master
+$ cd frontend
+# instala las dependencias del proyecto
+$ npm i
+# ejecute `npm run dev` para un servidor de desarrollo. Vaya a `http: // localhost: 4000 /`. La aplicación se volverá a cargar automáticamente si cambia alguno de los archivos de origen.
+$ npm run dev
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para iniciar el server utilice:
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command 
+```bash
+$ git clon https://github.com/crosscay/mean_stack_crud_de_productos_con_angular_y_node_js.git
+$ cd mean_stack_crud_de_productos_con_angular_y_node_js-master
+$ cd server
+# instala las dependencias del proyecto
+$ npm i
+# ejecute `npm run dev` para un servidor de desarrollo. Vaya a `http: // localhost: 4000 /`. La aplicación se volverá a cargar automáticamente si cambia alguno de los archivos de origen.
+$ npm run dev
+```
