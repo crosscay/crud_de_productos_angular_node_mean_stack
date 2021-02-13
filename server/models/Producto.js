@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const ProductoSchema = mongoose.Schema({
-    producto: {
+    nombre: {
         type: String,
         required: true
     },
@@ -19,7 +19,7 @@ const ProductoSchema = mongoose.Schema({
     },
     fechaCreacion: {
         type: Date,
-        required: Date.now()
+        default: Date.now()
     }
 });
 
