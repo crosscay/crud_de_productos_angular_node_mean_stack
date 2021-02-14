@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Producto } from 'src/app/models/producto';
+import { ProductoService } from 'src/app/services/producto.service';
 
 @Component({
   selector: 'app-crear-producto',
@@ -14,7 +15,8 @@ export class CrearProductoComponent implements OnInit {
 
   constructor(private _fb: FormBuilder,
               private _router: Router,
-              private toastr: ToastrService) {
+              private toastr: ToastrService,
+              private _productoService: ProductoService) {
     this.productoForm = this._fb.group({
       producto: ['', Validators.required],
       categoria: ['', Validators.required],
@@ -27,8 +29,6 @@ export class CrearProductoComponent implements OnInit {
   }
 
   agregarProducto() {
-    // console.log(this.productoForm);
-    // console.log(this.productoForm.get('producto')?.value);
     const PRODUCTO: Producto = {
       nombre: this.productoForm.get('producto')?.value,
       categoria: this.productoForm.get('categoria')?.value,
@@ -36,9 +36,13 @@ export class CrearProductoComponent implements OnInit {
       precio: this.productoForm.get('precio')?.value
     }
     console.log(PRODUCTO);
-    this.showSuccess();
-    this._router.navigate(['/']);
-
+    this._productoService.guardarProducto(PRODUCTO).subscribe((data: any) => {
+      this.showSuccess();
+      this._router.navigate(['/']);
+    }, (error: any) => {
+      console.log(error);
+      this.productoForm.reset();
+    });
   }
 
   showSuccess() {
