@@ -58,8 +58,32 @@ exports.obtenerProducto = async (req, res) => {
         if(!producto) {
             res.status(404).json({msg: 'No existe el producto '});
         } 
-        
+
         res.json(producto);
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).send('Hubo un error');
+    }
+}
+
+exports.eliminarProducto = async (req, res) => {
+    try {
+
+        const { nombre, categoria, ubicacion, precio } = req.body;
+        let producto = await Producto.findById(req.params.id);
+
+        if(!producto) {
+            res.status(404).json({msg: 'No existe el producto '});
+        } 
+
+        producto.nombre = nombre;
+        producto.categoria = categoria;
+        producto.ubicacion = ubicacion;
+        producto.precio = precio;
+
+        await Producto.findOneAndRemove({ _id: req.params.id });
+        res.json({ msg: 'Producto eliminado con exito' });
 
     } catch (error) {
         console.log(error);
