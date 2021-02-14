@@ -14,7 +14,7 @@ export class ProductoService {
       "Content-Type": "application/json"
   });
 
-  url = 'http://localhost:4000/api/productos/';
+  url = 'https://server-productos-node-express.herokuapp.com/api/productos/';
 
   constructor(private http: HttpClient) {}
 
@@ -28,5 +28,13 @@ export class ProductoService {
 
   guardarProducto(producto: Producto):Observable<any> {
     return this.http.post(this.url, producto);
+  }
+
+  obtenerProducto(id: string): Observable<any> {
+    return this.http.get(`${this.url}${id}`);
+  }
+
+  editarProducto(id: string, producto: Producto): Observable<any> {
+    return this.http.put(`${this.url}${id}`, producto);
   }
 }
