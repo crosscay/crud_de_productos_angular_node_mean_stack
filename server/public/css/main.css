@@ -1,0 +1,22 @@
+  
+body {
+    background-color: #565656;
+}
+  
+#contentWrap {
+    display: none;
+}
+  
+.error {
+    color: red;
+}
+  
+.whisper {
+    color: gray;
+    font-style: italic;
+}
+
+.h1 {
+    font-size: 30px;
+    font-weight: bold;
+}

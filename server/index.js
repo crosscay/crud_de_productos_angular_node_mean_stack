@@ -1,9 +1,15 @@
+// server.js
+
+require('dotenv').config({ path: 'variables.env'});
 const express = require('express');
+const bodyParser = require('body-parser');
 const conectarDB = require('./config/db');
 const cors = require('cors');
 
 // Creamos el servidor
 const app = express();
+
+app.use(express.static('public'));
 
 // Conectamos a la BD
 conectarDB();
@@ -13,11 +19,9 @@ app.use(express.json());
 
 app.use('/api/productos', require('./routes/producto'));
 
-// Definimos ruta principal
-app.get('/', (req, res)=> {
-    res.send('Hola Mundo');
-});
+// settings
+app.set('port', process.env.PORT || 4000);
 
-app.listen(4000, ()=>{
-    console.log('El servidor esta corriendo perfectamente');
+const server = app.listen(app.get('port'), ()=> {
+    console.log(`The Express server is running perfectly → PORT: ${server.address().port}`);
 });
