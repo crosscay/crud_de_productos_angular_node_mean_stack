@@ -18,7 +18,7 @@ Aplicación web, Crud de productos, creada con mongodb, express, angular 11 y no
 Para iniciar el frontend utilice:
 
 ```bash
-$ git clon https://github.com/crosscay/mean_stack_crud_de_productos_con_angular_y_node_js.git
+$ git clon https://github.com/crosscay/mean-stack-crud-de-productos-con-angular-y-node-js.git
 $ cd mean_stack_crud_de_productos_con_angular_y_node_js-master
 $ cd frontend
 # instala las dependencias del proyecto
@@ -30,7 +30,7 @@ $ npm run dev
 Para iniciar el server utilice:
 
 ```bash
-$ git clon https://github.com/crosscay/mean_stack_crud_de_productos_con_angular_y_node_js.git
+$ git clon https://github.com/crosscay/mean-stack-crud-de-productos-con-angular-y-node-js.git
 $ cd mean_stack_crud_de_productos_con_angular_y_node_js-master
 $ cd server
 # instala las dependencias del proyecto
