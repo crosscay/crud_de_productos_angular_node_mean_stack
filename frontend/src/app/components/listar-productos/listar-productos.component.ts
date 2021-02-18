@@ -23,7 +23,6 @@ export class ListarProductosComponent implements OnInit {
   obtenerProducto() {
     this._productoService.getProductos().subscribe((data: any) => {
       this.listProductos = data;
-      console.log(data)
     }, (error: any) => {
       console.log(error);
     });
