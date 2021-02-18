@@ -24,7 +24,7 @@ $ cd frontend
 # instala las dependencias del proyecto
 $ npm i
 # ejecute `ng serve` para un servidor de desarrollo. Vaya a `http: // localhost: 4200 /`. La aplicación se volverá a cargar automáticamente si cambia alguno de los archivos de origen.
-$ npm run dev
+$ npm serve
 ```
 
 Para iniciar el server utilice:
