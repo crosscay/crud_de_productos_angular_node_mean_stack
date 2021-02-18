@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Producto } from 'src/app/models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
+import { SpinnerService } from '../../services/spinner.service';
 
 @Component({
   selector: 'app-listar-productos',
@@ -22,6 +23,7 @@ export class ListarProductosComponent implements OnInit {
   obtenerProducto() {
     this._productoService.getProductos().subscribe((data: any) => {
       this.listProductos = data;
+      console.log(data)
     }, (error: any) => {
       console.log(error);
     });
